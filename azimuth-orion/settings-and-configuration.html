@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-azimuth-orion/settings-and-configuration" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">Settings and Configuration | Azimuth Developer Tools</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://cat6digital.github.io/azimuth-docs-site/azimuth-orion/settings-and-configuration"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Settings and Configuration | Azimuth Developer Tools"><meta data-rh="true" name="description" content="Opening Settings"><meta data-rh="true" property="og:description" content="Opening Settings"><link data-rh="true" rel="icon" href="/azimuth-docs-site/img/favicon.png"><link data-rh="true" rel="canonical" href="https://cat6digital.github.io/azimuth-docs-site/azimuth-orion/settings-and-configuration"><link data-rh="true" rel="alternate" href="https://cat6digital.github.io/azimuth-docs-site/azimuth-orion/settings-and-configuration" hreflang="en"><link data-rh="true" rel="alternate" href="https://cat6digital.github.io/azimuth-docs-site/azimuth-orion/settings-and-configuration" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Azimuth Orion","item":"https://cat6digital.github.io/azimuth-docs-site/category/azimuth-orion"},{"@type":"ListItem","position":2,"name":"Settings and Configuration","item":"https://cat6digital.github.io/azimuth-docs-site/azimuth-orion/settings-and-configuration"}]}</script><link rel="stylesheet" href="/azimuth-docs-site/fonts/fonts.css">
+<style>
+        body::after {
+          content: '';
+          position: fixed;
+          inset: 0;
+          z-index: -2;
+          pointer-events: none;
+          background-image: url('/azimuth-docs-site/img/space-bg.jpg');
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        html[data-theme='light'] body::after {
+          opacity: 0.4;
+          filter: grayscale(0.3);
+        }
+        .site-footer {
+          background-image: url('/azimuth-docs-site/img/space-bg.jpg');
+          background-attachment: fixed;
+          background-size: cover;
+          background-position: center;
+        }
+      </style><link rel="stylesheet" href="/azimuth-docs-site/assets/css/styles.43efb53f.css">
+<script src="/azimuth-docs-site/assets/js/runtime~main.449dbb0c.js" defer="defer"></script>
+<script src="/azimuth-docs-site/assets/js/main.ecbe3020.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||(window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light")),document.documentElement.setAttribute("data-theme-choice",t||"system")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/azimuth-docs-site/img/favicon.png"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="theme-layout-navbar navbar navbar--fixed-top navbarHideable_m1mJ"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a href="https://azimuthtools.com" target="_blank" rel="noopener noreferrer" class="navbar__brand"><div class="navbar__logo"><img src="/azimuth-docs-site/img/favicon.png" alt="Cat6 Digital" class="themedComponent_mlkZ themedComponent--light_NVdE" style="height:48px"><img src="/azimuth-docs-site/img/favicon.png" alt="Cat6 Digital" class="themedComponent_mlkZ themedComponent--dark_xIcU" style="height:48px"></div></a><a href="https://azimuthtools.com" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Home<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a href="https://azimuthtools.com/#plugins" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Plugins<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/azimuth-docs-site/">Docs</a><a href="https://www.youtube.com/@Cat6Digital" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar__social-icon navbar__social-icon--youtube" aria-label="YouTube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.546 12 3.546 12 3.546s-7.505 0-9.377.504A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.504 9.376.504 9.376.504s7.505 0 9.377-.504a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a href="https://x.com/cat6digital" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link navbar__social-icon navbar__social-icon--x" aria-label="X (Twitter)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="Switch between dark and light mode (currently system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd sidebarWithHideableNavbar_wUlq"><a href="https://azimuthtools.com" target="_blank" rel="noopener noreferrer" tabindex="-1" class="sidebarLogo_isFc"><img src="/azimuth-docs-site/img/favicon.png" alt="Cat6 Digital" class="themedComponent_mlkZ themedComponent--light_NVdE" style="height:48px"><img src="/azimuth-docs-site/img/favicon.png" alt="Cat6 Digital" class="themedComponent_mlkZ themedComponent--dark_xIcU" style="height:48px"></a><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/azimuth-docs-site/"><span title="Azimuth Developer Tools" class="linkLabel_WmDU">Azimuth Developer Tools</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--active" href="/azimuth-docs-site/category/azimuth-orion"><span title="Azimuth Orion" class="categoryLinkLabel_W154">Azimuth Orion</span></a><button aria-label="Collapse sidebar category &#x27;Azimuth Orion&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/welcome-to-azimuth-orion"><span title="Welcome to Azimuth Orion" class="linkLabel_WmDU">Welcome to Azimuth Orion</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/getting-started"><span title="Getting Started" class="linkLabel_WmDU">Getting Started</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/using-the-chat-window"><span title="Using the Chat Window" class="linkLabel_WmDU">Using the Chat Window</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/blueprint-analysis"><span title="Blueprint Analysis" class="linkLabel_WmDU">Blueprint Analysis</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/analyzing-any-asset-describe-to-orion"><span title="Analyzing Any Asset (Describe to Orion)" class="linkLabel_WmDU">Analyzing Any Asset (Describe to Orion)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/using-vision-screenshots"><span title="Using Vision (Screenshots)" class="linkLabel_WmDU">Using Vision (Screenshots)</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/modes-and-context"><span title="Modes and Context" class="linkLabel_WmDU">Modes and Context</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/azimuth-docs-site/azimuth-orion/settings-and-configuration"><span title="Settings and Configuration" class="linkLabel_WmDU">Settings and Configuration</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/blueprint-toolbar-features"><span title="Blueprint Toolbar Features" class="linkLabel_WmDU">Blueprint Toolbar Features</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/content-browser-right-click"><span title="Content Browser Right-Click" class="linkLabel_WmDU">Content Browser Right-Click</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/advanced-features"><span title="Advanced Features" class="linkLabel_WmDU">Advanced Features</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/tips-and-best-practices"><span title="Tips and Best Practices" class="linkLabel_WmDU">Tips and Best Practices</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/troubleshooting"><span title="Troubleshooting" class="linkLabel_WmDU">Troubleshooting</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/sample-workflows"><span title="Sample Workflows" class="linkLabel_WmDU">Sample Workflows</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/faq"><span title="FAQ" class="linkLabel_WmDU">FAQ</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/getting-help"><span title="Getting Help" class="linkLabel_WmDU">Getting Help</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/appendix-a-supported-models-reference"><span title="Appendix A: Supported Models Reference" class="linkLabel_WmDU">Appendix A: Supported Models Reference</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/appendix-b-asset-type-coverage"><span title="Appendix B: Asset Type Coverage" class="linkLabel_WmDU">Appendix B: Asset Type Coverage</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/azimuth-docs-site/azimuth-orion/document-information"><span title="Document Information" class="linkLabel_WmDU">Document Information</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist" href="/azimuth-docs-site/category/azimuth-markdown"><span title="Azimuth Markdown" class="categoryLinkLabel_W154">Azimuth Markdown</span></a><button aria-label="Expand sidebar category &#x27;Azimuth Markdown&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li></ul></nav><button type="button" title="Collapse sidebar" aria-label="Collapse sidebar" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/azimuth-docs-site/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/azimuth-docs-site/category/azimuth-orion"><span>Azimuth Orion</span></a></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">Settings and Configuration</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Settings and Configuration</h1></header><h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="opening-settings">Opening Settings<a href="#opening-settings" class="hash-link" aria-label="Direct link to Opening Settings" title="Direct link to Opening Settings" translate="no">​</a></h3>
+<p>Access Orion settings in three ways:</p>
+<ol>
+<li class=""><strong>Project Settings:</strong> Edit &gt; Project Settings &gt; Plugins &gt; Azimuth &gt; Azimuth Orion (most comprehensive)</li>
+<li class=""><strong>Chat window gear icon:</strong> Click the settings gear in the top-right of the Orion chat window</li>
+<li class=""><strong>Toolbar shortcut:</strong> (if implemented) Main editor toolbar Orion icon right-click menu</li>
+</ol>
+<p><strong>Screenshot Placeholder:</strong> <code>[Project Settings window open with left sidebar showing Plugins &gt; Azimuth expanded, &quot;Azimuth Orion&quot; selected and highlighted]</code></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="ai-configuration-category">AI Configuration Category<a href="#ai-configuration-category" class="hash-link" aria-label="Direct link to AI Configuration Category" title="Direct link to AI Configuration Category" translate="no">​</a></h3>
+<p>This category controls which AI model you&#x27;re using and basic request settings.</p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Settings panel showing AI Configuration category expanded with all settings visible]</code></p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="model-selection">Model Selection<a href="#model-selection" class="hash-link" aria-label="Direct link to Model Selection" title="Direct link to Model Selection" translate="no">​</a></h4>
+<p><strong>Model ID dropdown:</strong></p>
+<ul>
+<li class="">Shows all models from enabled providers</li>
+<li class="">Disabled providers&#x27; models are hidden</li>
+<li class="">Models in the &quot;Disabled Models&quot; list are hidden</li>
+</ul>
+<p><strong>Screenshot Placeholder:</strong> <code>[Model ID dropdown expanded showing available models: grok-code-fast-1, grok-3, grok-4, GPT-4o, GPT-4o mini, Claude Sonnet 4.5, etc. Tooltip visible on &quot;GPT-4o&quot; showing: &quot;Context: 128k tokens, Max Output: 16k, Vision: Yes, Cost: High&quot;]</code></p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="request-settings">Request Settings<a href="#request-settings" class="hash-link" aria-label="Direct link to Request Settings" title="Direct link to Request Settings" translate="no">​</a></h4>
+<p><strong>Max Output Tokens:</strong></p>
+<ul>
+<li class="">Caps the length of AI responses</li>
+<li class="">Set to 0 for API default (recommended for most users)</li>
+<li class="">Lower values (e.g., 2000) give shorter responses and cost less</li>
+<li class="">Higher values (e.g., 16000) allow longer, more detailed responses</li>
+</ul>
+<p><strong>Request Timeout (Seconds):</strong></p>
+<ul>
+<li class="">How long to wait before canceling a request</li>
+<li class="">Set to 0 for model-based default (60-90s depending on model)</li>
+<li class="">Increase if you frequently get timeout errors on large Blueprint analysis</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="other-settings">Other Settings<a href="#other-settings" class="hash-link" aria-label="Direct link to Other Settings" title="Direct link to Other Settings" translate="no">​</a></h4>
+<p><strong>Persisted Response ID (Read-only):</strong></p>
+<ul>
+<li class="">Tracks the current xAI conversation chain (managed automatically)</li>
+<li class="">You don&#x27;t need to edit this</li>
+<li class="">To clear: Use &quot;Clear server history&quot; button</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="custom-endpoint-ollama--lm-studio--local-models">Custom Endpoint (Ollama / LM Studio / Local Models)<a href="#custom-endpoint-ollama--lm-studio--local-models" class="hash-link" aria-label="Direct link to Custom Endpoint (Ollama / LM Studio / Local Models)" title="Direct link to Custom Endpoint (Ollama / LM Studio / Local Models)" translate="no">​</a></h4>
+<p>Orion supports connecting to any OpenAI-compatible API endpoint. These settings are in the <strong>AI Configuration</strong> category, below the standard model settings. The <strong>URL, Model ID, and Skip Auth fields collapse</strong> (hidden entirely) until you enable the &quot;Use Custom Endpoint&quot; toggle.</p>
+<p><strong>How to set up:</strong></p>
+<ol>
+<li class="">Go to Settings &gt; AI Configuration</li>
+<li class="">Check <strong>Use Custom Endpoint</strong> — the sub-fields appear</li>
+<li class="">Enter the <strong>Custom Endpoint URL</strong> — the base URL of your local server:
+<ul>
+<li class="">Ollama: <code>http://localhost:11434/v1</code></li>
+<li class="">LM Studio: <code>http://localhost:1234/v1</code></li>
+<li class="">Other OpenAI-compatible: <code>http://your-server:port/v1</code></li>
+</ul>
+</li>
+<li class="">Enter the <strong>Custom Model ID</strong> — the model name your server uses:
+<ul>
+<li class="">Examples: <code>llama3</code>, <code>mistral</code>, <code>codestral</code>, <code>deepseek-coder</code></li>
+<li class="">This model appears in the Model dropdown with a &quot;(Custom)&quot; suffix</li>
+</ul>
+</li>
+<li class="">(Optional) Check <strong>Skip Auth for Custom Endpoint</strong> if your local server doesn&#x27;t require an API key</li>
+</ol>
+<p><strong>Using your custom model:</strong></p>
+<ul>
+<li class="">Once configured, select your custom model from the <strong>Model</strong> dropdown at the top of AI Configuration (or in the EUW model selector)</li>
+<li class="">You can freely switch between your custom model and standard cloud models</li>
+<li class="">Standard cloud models continue to work normally alongside the custom endpoint</li>
+</ul>
+<p><strong>Important notes:</strong></p>
+<ul>
+<li class="">Your custom server must be OpenAI API-compatible (accepting <code>/chat/completions</code> requests)</li>
+<li class="">Trailing slashes in the URL are stripped automatically</li>
+<li class="">Local models may be slower; the default timeout for custom models is 120 seconds</li>
+</ul>
+<p><strong>Screenshot Placeholder:</strong> <code>[AI Configuration settings showing &quot;Custom Endpoint&quot; section with &quot;Use Custom Endpoint&quot; checked, URL field showing &quot;http://localhost:11434/v1&quot;, Custom Model ID field showing &quot;llama3&quot;, and &quot;Skip Auth&quot; checked]</code></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="ai-providers-category">AI Providers Category<a href="#ai-providers-category" class="hash-link" aria-label="Direct link to AI Providers Category" title="Direct link to AI Providers Category" translate="no">​</a></h3>
+<p>Control which AI providers are available and manage API keys. Each provider is separated by a thin horizontal line, and <strong>sub-rows (API Key, Expiration, Models) collapse when the provider is disabled</strong> — they disappear entirely rather than being dimmed.</p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Settings showing AI Providers category with all 4 provider subsections visible: xAI, OpenAI, Anthropic, Google, separated by horizontal dividers]</code></p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="enabledisable-providers">Enable/Disable Providers<a href="#enabledisable-providers" class="hash-link" aria-label="Direct link to Enable/Disable Providers" title="Direct link to Enable/Disable Providers" translate="no">​</a></h4>
+<p>Each provider has a bold header with an enable/disable checkbox:</p>
+<ul>
+<li class=""><strong>Enable xAI (Grok)</strong> — OFF by default</li>
+<li class=""><strong>Enable OpenAI</strong> — OFF by default</li>
+<li class=""><strong>Enable Anthropic (Claude)</strong> — OFF by default</li>
+<li class=""><strong>Enable Google (Gemini)</strong> — OFF by default</li>
+</ul>
+<p>All providers are disabled by default. Enable the ones you have API keys for.</p>
+<p><strong>Why disable providers?</strong></p>
+<ul>
+<li class="">You only have an API key for one provider</li>
+<li class="">You want to limit model choices to reduce decision fatigue</li>
+<li class="">You&#x27;re enforcing cost controls (disable expensive providers)</li>
+</ul>
+<p>When you disable a provider, all its models disappear from the Model ID dropdown, and the provider&#x27;s Key / Expiration / Models rows collapse.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="per-provider-settings">Per-Provider Settings<a href="#per-provider-settings" class="hash-link" aria-label="Direct link to Per-Provider Settings" title="Direct link to Per-Provider Settings" translate="no">​</a></h4>
+<p>Each provider (xAI, OpenAI, Anthropic, Google) has its own subsection (visible only when the provider is enabled):</p>
+<p><strong>API Key Management:</strong></p>
+<ul>
+<li class=""><strong>Set API Key button:</strong> Opens secure input dialog (or inline text field)</li>
+<li class=""><strong>Validate button:</strong> Tests the key with a quick API call
+<ul>
+<li class="">Green checkmark = valid key</li>
+<li class="">Red X = invalid or expired key</li>
+</ul>
+</li>
+<li class=""><strong>Delete button:</strong> Removes the key from encrypted storage (secure wipe)</li>
+</ul>
+<p><strong>Key Expiry:</strong></p>
+<ul>
+<li class=""><strong>[Provider] Key Expiry (Days):</strong> 3-90 days, or -1 for unlimited</li>
+<li class="">Default: 30 days</li>
+<li class="">Timer starts from last validation</li>
+<li class="">After expiry, Orion warns you to re-validate</li>
+</ul>
+<p><strong>Screenshot Placeholder:</strong> <code>[xAI subsection showing API key field, Validate button with green checkmark icon, Delete button, and &quot;xAI Key Expiry (Days)&quot; slider set to 30]</code></p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="disabled-models">Disabled Models<a href="#disabled-models" class="hash-link" aria-label="Direct link to Disabled Models" title="Direct link to Disabled Models" translate="no">​</a></h4>
+<p><strong>Disabled Models array:</strong></p>
+<ul>
+<li class="">List of model IDs to hide from dropdown (even if their provider is enabled)</li>
+<li class="">Use case: &quot;I have OpenAI enabled but I don&#x27;t want expensive o1 models available—only show GPT-4o and GPT-4o mini&quot;</li>
+</ul>
+<p><strong>How to use:</strong></p>
+<ol>
+<li class="">Click the &quot;+&quot; button to add an entry</li>
+<li class="">Type the model ID exactly (e.g., &quot;o1&quot;, &quot;claude-opus-4&quot;)</li>
+<li class="">That model disappears from the Model ID dropdown</li>
+</ol>
+<p><strong>Screenshot Placeholder:</strong> <code>[Disabled Models array showing entries: &quot;o1&quot;, &quot;claude-opus-4&quot; with + and - buttons visible]</code></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="interface-category">Interface Category<a href="#interface-category" class="hash-link" aria-label="Direct link to Interface Category" title="Direct link to Interface Category" translate="no">​</a></h3>
+<p>Control how Orion displays responses and what context it includes with queries.</p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Settings showing Interface category expanded]</code></p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="display-settings">Display Settings<a href="#display-settings" class="hash-link" aria-label="Direct link to Display Settings" title="Direct link to Display Settings" translate="no">​</a></h4>
+<p><strong>Response Display Mode:</strong></p>
+<ul>
+<li class=""><strong>Rich Text (default):</strong> Formatted responses with bold, headers, code block styling</li>
+<li class=""><strong>Plain Text:</strong> Unformatted text (easier to copy, no styling)</li>
+</ul>
+<p><strong>When to use Plain Text:</strong></p>
+<ul>
+<li class="">You&#x27;re copying large code blocks frequently (no formatting artifacts)</li>
+<li class="">You prefer minimal styling</li>
+<li class="">Rich text rendering has issues (rare)</li>
+</ul>
+<p><strong>Add Spacing Between Response Lines:</strong></p>
+<ul>
+<li class="">Adds extra padding between lines in AI responses</li>
+<li class="">Makes long responses easier to read</li>
+<li class="">Recommended: ON (default)</li>
+</ul>
+<p><strong>Screenshot Placeholders:</strong></p>
+<ul>
+<li class=""><code>[Side-by-side comparison: Left side shows Rich Text response with bold headers, inline code in gray boxes, and formatted code blocks. Right side shows same response in Plain Text with no formatting]</code></li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="integration">Integration<a href="#integration" class="hash-link" aria-label="Direct link to Integration" title="Direct link to Integration" translate="no">​</a></h4>
+<p>These toggles live under the <strong>Integration</strong> bold header (indented in the UI):</p>
+<p><strong>Enable Right-Click Menu:</strong></p>
+<ul>
+<li class="">Shows/hides &quot;Azimuth Orion&quot; submenu in Content Browser</li>
+<li class="">Default: ON</li>
+<li class="">Turn OFF if you rarely use right-click analysis (declutter context menu)</li>
+</ul>
+<p><strong>Graph Analysis Uses Deep Scan Mode:</strong></p>
+<ul>
+<li class="">When analyzing from Blueprint toolbar, use Deep Scan mode and show toast</li>
+<li class="">Default: ON</li>
+</ul>
+<p><strong>Show Usage Tabulation (Experimental):</strong></p>
+<ul>
+<li class="">Displays token usage in chat window (estimated + actual from API)</li>
+<li class="">Shows: Last request tokens, session total</li>
+</ul>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="query-context">Query Context<a href="#query-context" class="hash-link" aria-label="Direct link to Query Context" title="Direct link to Query Context" translate="no">​</a></h4>
+<p>Context settings live under the <strong>Query Context</strong> bold header. Dependent sub-settings <strong>collapse</strong> (disappear entirely) when their parent toggle is off — they are not dimmed.</p>
+<p><strong>Note:</strong> Project name and engine version are <strong>always included</strong> in every query&#x27;s system message automatically. There is no toggle for this; it is always active.</p>
+<p><strong>Include Last Log Lines in Query:</strong></p>
+<ul>
+<li class="">Prepends recent Output Log lines to each query</li>
+<li class="">Essential for error troubleshooting</li>
+<li class="">When enabled, the following sub-settings appear:
+<ul>
+<li class=""><strong>Last Log Lines Count:</strong> 1-200 lines (default: 20) — <em>hidden when parent toggle is off</em></li>
+<li class=""><strong>Send Full Log:</strong> Sends entire captured buffer instead of last N lines — <em>hidden when parent toggle is off</em></li>
+</ul>
+</li>
+</ul>
+<p><strong>When to enable log lines:</strong></p>
+<ul>
+<li class="">You have a compilation error and want AI to diagnose it</li>
+<li class="">You have a runtime error/crash and need help</li>
+<li class="">You&#x27;re seeing warnings and want explanations</li>
+</ul>
+<p><strong>Example with log lines enabled:</strong></p>
+<p>Your Output Log shows:</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">Error: Blueprint BP_PlayerController (function UpdateHUD): Variable &#x27;HealthWidget&#x27; used but not defined</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">Warning: Accessed None trying to read property &#x27;HealthWidget&#x27;</span><br></span></code></pre></div></div>
+<p>You ask: &quot;What&#x27;s wrong?&quot;</p>
+<p>AI receives the log lines + your question, responds:
+<em>&quot;Based on your Output Log, you&#x27;re trying to access a variable &#x27;HealthWidget&#x27; that doesn&#x27;t exist in the Blueprint. You need to add a variable named &#x27;HealthWidget&#x27; (type: User Widget object reference) to BP_PlayerController.&quot;</em></p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Settings showing Include Last Log Lines in Query checkbox checked, Last Log Lines Count and Send Full Log visible below it]</code></p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="mode-context">Mode Context<a href="#mode-context" class="hash-link" aria-label="Direct link to Mode Context" title="Direct link to Mode Context" translate="no">​</a></h4>
+<p><strong>Deep Scan Mode Context</strong> and <strong>Orbital (Ask) Mode Context</strong> — custom system message prompts for each mode (multi-line text fields).</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="logging">Logging<a href="#logging" class="hash-link" aria-label="Direct link to Logging" title="Direct link to Logging" translate="no">​</a></h4>
+<p><strong>Log Format</strong>, <strong>Log Directory</strong>, and <strong>Auto-export Chat Log</strong> — chat export settings.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="quickprompts">QuickPrompts<a href="#quickprompts" class="hash-link" aria-label="Direct link to QuickPrompts" title="Direct link to QuickPrompts" translate="no">​</a></h4>
+<p>QuickPrompts settings are now under the <strong>Interface</strong> category (previously a separate category).</p>
+<p><strong>Enable Custom QuickPrompts:</strong></p>
+<ul>
+<li class="">Load additional QuickPrompt libraries from a custom folder</li>
+<li class="">When enabled, the following sub-setting appears:
+<ul>
+<li class=""><strong>Custom QuickPrompts Path</strong> — Folder containing <code>UOrionQuickPromptLibrary</code> assets — <em>hidden when toggle is off</em></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="blueprint-context-category">Blueprint Context Category<a href="#blueprint-context-category" class="hash-link" aria-label="Direct link to Blueprint Context Category" title="Direct link to Blueprint Context Category" translate="no">​</a></h3>
+<p>Controls how Blueprint analysis works.</p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Settings showing Blueprint Context category]</code></p>
+<p><strong>Compile On Send:</strong></p>
+<ul>
+<li class="">Enabled by default</li>
+<li class="">Compiles Blueprint before sending to AI</li>
+<li class="">Includes compiler results (errors/warnings) and defined variables in the context</li>
+<li class=""><strong>Why it&#x27;s useful:</strong> AI can diagnose missing variables, compilation errors</li>
+<li class=""><strong>Disable if:</strong> You don&#x27;t want automatic compilation (prefer manual control)</li>
+</ul>
+<p><strong>Context Send Display Message:</strong></p>
+<ul>
+<li class="">Template for what you see in chat when sending Blueprint context</li>
+<li class="">Default: <code>&quot;Blueprint {BlueprintName} is being analyzed...&quot;</code></li>
+<li class="">Placeholders: <code>{BlueprintName}</code>, <code>{GraphCount}</code>, <code>{NodeCount}</code>, <code>{PayloadLabel}</code></li>
+<li class="">Customize if you want different wording</li>
+</ul>
+<p><strong>Context Send API Prompt:</strong></p>
+<ul>
+<li class="">Template for the actual prompt sent to the AI</li>
+<li class="">Default: <code>&quot;Blueprint context for {BlueprintName}. Please acknowledge that you received it and ask what I would like to know about it.&quot;</code></li>
+<li class="">Advanced users can customize to change AI behavior</li>
+</ul>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="eda-integration-category">EDA Integration Category<a href="#eda-integration-category" class="hash-link" aria-label="Direct link to EDA Integration Category" title="Direct link to EDA Integration Category" translate="no">​</a></h3>
+<p>Export Blueprint context to Epic Developer Assistant (EDA).</p>
+<p><strong>Enable EDA Integration:</strong></p>
+<ul>
+<li class="">Default: ON</li>
+<li class="">Shows &quot;EDA&quot; destination option in Blueprint toolbar Send dropdown</li>
+<li class="">Allows exporting Blueprint context as JSON</li>
+</ul>
+<p><strong>EDA Context Export Path:</strong></p>
+<ul>
+<li class="">Where JSON files are saved</li>
+<li class="">Default: <code>Saved/AzimuthOrion/ContextExports/</code></li>
+<li class="">Customize if you want a different location</li>
+</ul>
+<p><strong>Copy to Clipboard on EDA Export:</strong></p>
+<ul>
+<li class="">Default: ON</li>
+<li class="">When exporting to EDA, also copies JSON to clipboard</li>
+<li class="">Useful: Paste directly into EDA without opening the file</li>
+</ul>
+<p><strong>Screenshot Placeholder:</strong> <code>[Settings showing EDA Integration category with Enable EDA Integration checked, export path field showing default, and clipboard copy checkbox checked]</code></p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="project-indexing-category">Project Indexing Category<a href="#project-indexing-category" class="hash-link" aria-label="Direct link to Project Indexing Category" title="Direct link to Project Indexing Category" translate="no">​</a></h3>
+<p><strong>Note:</strong> Full project indexing is a planned feature. Currently available:</p>
+<p><strong>Use Cached Results When Analyzing Blueprints:</strong></p>
+<ul>
+<li class="">When enabled, uses cached Blueprint summaries if available</li>
+<li class="">Faster analysis (no re-parsing if Blueprint hasn&#x27;t changed)</li>
+<li class="">Currently experimental</li>
+</ul>
+<hr></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/azimuth-docs-site/azimuth-orion/modes-and-context"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Modes and Context</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/azimuth-docs-site/azimuth-orion/blueprint-toolbar-features"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Blueprint Toolbar Features</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#opening-settings" class="table-of-contents__link toc-highlight">Opening Settings</a></li><li><a href="#ai-configuration-category" class="table-of-contents__link toc-highlight">AI Configuration Category</a><ul><li><a href="#model-selection" class="table-of-contents__link toc-highlight">Model Selection</a></li><li><a href="#request-settings" class="table-of-contents__link toc-highlight">Request Settings</a></li><li><a href="#other-settings" class="table-of-contents__link toc-highlight">Other Settings</a></li><li><a href="#custom-endpoint-ollama--lm-studio--local-models" class="table-of-contents__link toc-highlight">Custom Endpoint (Ollama / LM Studio / Local Models)</a></li></ul></li><li><a href="#ai-providers-category" class="table-of-contents__link toc-highlight">AI Providers Category</a><ul><li><a href="#enabledisable-providers" class="table-of-contents__link toc-highlight">Enable/Disable Providers</a></li><li><a href="#per-provider-settings" class="table-of-contents__link toc-highlight">Per-Provider Settings</a></li><li><a href="#disabled-models" class="table-of-contents__link toc-highlight">Disabled Models</a></li></ul></li><li><a href="#interface-category" class="table-of-contents__link toc-highlight">Interface Category</a><ul><li><a href="#display-settings" class="table-of-contents__link toc-highlight">Display Settings</a></li><li><a href="#integration" class="table-of-contents__link toc-highlight">Integration</a></li><li><a href="#query-context" class="table-of-contents__link toc-highlight">Query Context</a></li><li><a href="#mode-context" class="table-of-contents__link toc-highlight">Mode Context</a></li><li><a href="#logging" class="table-of-contents__link toc-highlight">Logging</a></li><li><a href="#quickprompts" class="table-of-contents__link toc-highlight">QuickPrompts</a></li></ul></li><li><a href="#blueprint-context-category" class="table-of-contents__link toc-highlight">Blueprint Context Category</a></li><li><a href="#eda-integration-category" class="table-of-contents__link toc-highlight">EDA Integration Category</a></li><li><a href="#project-indexing-category" class="table-of-contents__link toc-highlight">Project Indexing Category</a></li></ul></div></div></div></div></main></div></div></div><footer class="site-footer"><div class="site-footer__overlay"></div><div class="site-footer__content"><img src="/azimuth-docs-site/img/favicon.png" alt="Cat6 Digital" class="site-footer__logo"><p class="site-footer__copyright">© <!-- -->2026<!-- --> Cat6 Digital, LLC. All rights reserved. Cat6 Digital &amp; Cat6 Digital Logo are trademarks or registered trademarks of Cat6 Digital, LLC in the United States of America and elsewhere.</p><p class="site-footer__legal">Our websites may contain links to other sites and resources provided by third parties. These links are provided for your convenience only. Cat6 Digital has no control over the contents of those sites or resources, and accepts no responsibility for them or for any loss or damage that may arise from your use of them.</p><a href="https://cat6digital.com/cat6-digital-privacy-policy/" class="site-footer__link" target="_blank" rel="noopener noreferrer">Privacy Policy</a></div></footer></div>
+</body>
+</html>

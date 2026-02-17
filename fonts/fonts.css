@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Aerish';
+  src: url('Aerish.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'MBF Titanium Falcon';
+  src: url('MBF TITANIUM FALCON.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Falcon';
+  src: url('Falcon.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
