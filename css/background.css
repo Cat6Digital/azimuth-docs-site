@@ -1,6 +1,6 @@
 /* Background image and footer background — loaded from static/ to bypass webpack */
 html {
-  background-image: url('/azimuth-docs-site/img/space-bg.jpg');
+  background-image: url('/img/space-bg.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -8,7 +8,7 @@ html {
 }
 
 .site-footer {
-  background-image: url('/azimuth-docs-site/img/space-bg.jpg');
+  background-image: url('/img/space-bg.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
