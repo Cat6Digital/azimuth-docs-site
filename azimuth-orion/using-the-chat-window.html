@@ -29,7 +29,7 @@
           background-position: center;
         }
       </style><link rel="stylesheet" href="/assets/css/styles.8d88fe9e.css">
-<script src="/assets/js/runtime~main.bb2879ca.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.c422edea.js" defer="defer"></script>
 <script src="/assets/js/main.0d73c3a4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -59,13 +59,13 @@
 </ol>
 <p><strong>Example questions you can ask:</strong></p>
 <ul>
-<li class="">&quot;How do I create a TArray of actors in C++?&quot;</li>
+<li class="">&quot;How do I create an array of actors in Blueprint?&quot;</li>
 <li class="">&quot;Explain how Blueprint interfaces work&quot;</li>
 <li class="">&quot;What&#x27;s the difference between Tick and Timer?&quot;</li>
-<li class="">&quot;Show me how to implement a health system&quot;</li>
+<li class="">&quot;Show me how to implement a health system in Blueprint&quot;</li>
 <li class="">&quot;Best practices for multiplayer actor replication&quot;</li>
 </ul>
-<p><strong>Screenshot Placeholder:</strong> <code>[Chat window showing a sample question &quot;How do I create a TArray of actors in C++?&quot; followed by an AI response with formatted C++ code block showing TArray&lt;AActor*&gt; syntax]</code></p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Chat window showing a sample question &quot;How do I create an array of actors in Blueprint?&quot; followed by an AI response with formatted node names and execution flow]</code></p>
 <p><strong>While processing:</strong></p>
 <ul>
 <li class="">The Send button changes to <strong>Stop</strong></li>
@@ -73,10 +73,10 @@
 <li class="">A loading indicator may appear</li>
 </ul>
 <p><strong>Screenshot Placeholder:</strong> <code>[Chat window with Stop button visible (replaces Send) and loading indicator while query is in progress]</code></p>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="modes-orbital-c-mode-deep-scan">Modes: Orbital, C++ Mode, Deep Scan<a href="#modes-orbital-c-mode-deep-scan" class="hash-link" aria-label="Direct link to Modes: Orbital, C++ Mode, Deep Scan" title="Direct link to Modes: Orbital, C++ Mode, Deep Scan" translate="no">​</a></h3>
-<p>Orion has three query modes that adjust how the AI responds to your questions. Think of them as different &quot;lenses&quot; the AI uses.</p>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="modes-orbital-and-deep-scan">Modes: Orbital and Deep Scan<a href="#modes-orbital-and-deep-scan" class="hash-link" aria-label="Direct link to Modes: Orbital and Deep Scan" title="Direct link to Modes: Orbital and Deep Scan" translate="no">​</a></h3>
+<p>Orion has two query modes that adjust how the AI responds to your questions. Think of them as different &quot;lenses&quot; the AI uses.</p>
 <p><strong>Mode dropdown location:</strong> Top-left corner of the chat window</p>
-<p><strong>Screenshot Placeholder:</strong> <code>[Mode dropdown expanded, showing three options: &quot;Orbital (Ask)&quot;, &quot;C++ Mode&quot;, &quot;Deep Scan (Blueprint)&quot; with radio buttons]</code></p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Mode dropdown expanded, showing two options: &quot;Orbital (Ask)&quot;, &quot;Deep Scan (Blueprint)&quot; with radio buttons]</code></p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="orbital-ask-mode--default">Orbital (Ask Mode) — Default<a href="#orbital-ask-mode--default" class="hash-link" aria-label="Direct link to Orbital (Ask Mode) — Default" title="Direct link to Orbital (Ask Mode) — Default" translate="no">​</a></h4>
 <p><strong>Best for:</strong></p>
 <ul>
@@ -93,22 +93,6 @@
 <li class="">&quot;Best practices for inventory systems&quot;</li>
 <li class="">&quot;How does level streaming work?&quot;</li>
 </ul>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="c-mode">C++ Mode<a href="#c-mode" class="hash-link" aria-label="Direct link to C++ Mode" title="Direct link to C++ Mode" translate="no">​</a></h4>
-<p><strong>Best for:</strong></p>
-<ul>
-<li class="">Code generation</li>
-<li class="">C++ syntax questions</li>
-<li class="">API reference lookups</li>
-<li class="">When you need actual code snippets</li>
-</ul>
-<p><strong>AI behavior:</strong> C++ focused, uses UCLASS/UFUNCTION/UPROPERTY syntax, references official UE5 documentation</p>
-<p><strong>Example questions:</strong></p>
-<ul>
-<li class="">&quot;Generate a C++ class for a health component&quot;</li>
-<li class="">&quot;How do I use TObjectPtr instead of raw pointers?&quot;</li>
-<li class="">&quot;What&#x27;s the correct way to bind a delegate in C++?&quot;</li>
-<li class="">&quot;Show me how to implement IInterface in C++&quot;</li>
-</ul>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="deep-scan-blueprint-mode">Deep Scan (Blueprint Mode)<a href="#deep-scan-blueprint-mode" class="hash-link" aria-label="Direct link to Deep Scan (Blueprint Mode)" title="Direct link to Deep Scan (Blueprint Mode)" translate="no">​</a></h4>
 <p><strong>Best for:</strong></p>
 <ul>
@@ -117,7 +101,7 @@
 <li class="">Optimization suggestions</li>
 <li class="">Understanding complex node graphs</li>
 </ul>
-<p><strong>AI behavior:</strong> Highly technical, node-level detail, Blueprint/C++ interop knowledge</p>
+<p><strong>AI behavior:</strong> Highly technical, node-level detail, Blueprint-specific knowledge</p>
 <p><strong>Example questions:</strong></p>
 <ul>
 <li class="">&quot;Analyze this graph for performance issues&quot;</li>
@@ -137,17 +121,17 @@
 <p><strong>Copy button</strong> (on every message):</p>
 <ul>
 <li class="">Copies the full message text to clipboard</li>
-<li class="">Useful for pasting AI code suggestions into your project</li>
+<li class="">Useful for pasting AI suggestions into your notes or external tools</li>
 <li class="">Click the copy icon on any message</li>
 </ul>
-<p><strong>Code Block Copy</strong> (on AI messages with code):</p>
+<p><strong>Formatted Block Copy</strong> (on AI messages with fenced blocks):</p>
 <ul>
-<li class=""><strong>Copy Code Block</strong> — Copies a specific code block from the message (by index)</li>
-<li class=""><strong>Copy All Code Blocks</strong> — Copies all code blocks from the message, separated by dividers</li>
-<li class=""><strong>Has Code Blocks</strong> — Can be used to show/hide the copy code buttons (returns true if the message contains ``` fenced code)</li>
+<li class=""><strong>Copy Code Block</strong> — Copies a specific Code formatted block from the message (by index)</li>
+<li class=""><strong>Copy All Code Blocks</strong> — Copies all Code blocks from the message, separated by dividers</li>
+<li class=""><strong>Has Code Blocks</strong> — Can be used to show/hide the code block copy buttons (returns true if the message contains ``` fenced blocks)</li>
 <li class="">These functions are available on each chat message widget in the message list</li>
 </ul>
-<p><strong>Screenshot Placeholder:</strong> <code>[Chat message with copy button and code copy button visible on a message containing a code block]</code></p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Chat message with copy button and formatted block copy button visible on a message containing a formatted block]</code></p>
 <p><strong>Retry button</strong> (bottom bar):</p>
 <ul>
 <li class="">Resends your last question</li>
@@ -185,8 +169,8 @@
 <ul>
 <li class="">You: &quot;How do I make a health bar?&quot;</li>
 <li class="">AI: [explains widget-based health bar implementation]</li>
-<li class="">You: &quot;Can you show that in C++ instead?&quot;</li>
-<li class="">AI: [remembers prior context, provides C++ health component version]</li>
+<li class="">You: &quot;Can you show that with a different approach?&quot;</li>
+<li class="">AI: [remembers prior context, provides alternative implementation]</li>
 </ul>
 <p><strong>Cost consideration:</strong> Conversation context increases token usage (you&#x27;re sending more text with each query). This increases API fees. Use it when you need multi-turn discussions; disable it for one-off questions.</p>
 <p><strong>Screenshot Placeholder:</strong> <code>[Settings window showing Interface category with &quot;Use Conversation Context&quot; checkbox checked and &quot;Max Context Messages&quot; slider set to 10]</code></p>
@@ -292,7 +276,7 @@
 
 
 
-<table><thead><tr><th>Group</th><th>Prompts</th><th>What They Cover</th></tr></thead><tbody><tr><td><strong>Blueprint</strong></td><td>3</td><td>Summarize, explain selected nodes, optimize logic</td></tr><tr><td><strong>Material</strong></td><td>3</td><td>Explain material, optimize shader cost, create parameters</td></tr><tr><td><strong>DataTable</strong></td><td>2</td><td>Describe structure, validate entries</td></tr><tr><td><strong>WidgetBlueprint</strong></td><td>3</td><td>Review layout, add accessibility, explain bindings</td></tr><tr><td><strong>Mesh</strong></td><td>2</td><td>Analyze complexity, LOD recommendations</td></tr><tr><td><strong>Advanced (Experimental)</strong></td><td>9</td><td>Project health check, error analysis, debugging strategy, C++ conversion, unit tests, code review, comparison, refactoring, documentation</td></tr><tr><td><strong>Custom</strong></td><td>2</td><td>Free-form question, beginner-friendly explanations</td></tr></tbody></table>
+<table><thead><tr><th>Group</th><th>Prompts</th><th>What They Cover</th></tr></thead><tbody><tr><td><strong>Blueprint</strong></td><td>3</td><td>Summarize, explain selected nodes, optimize logic</td></tr><tr><td><strong>Material</strong></td><td>3</td><td>Explain material, optimize shader cost, create parameters</td></tr><tr><td><strong>DataTable</strong></td><td>2</td><td>Describe structure, validate entries</td></tr><tr><td><strong>WidgetBlueprint</strong></td><td>3</td><td>Review layout, add accessibility, explain bindings</td></tr><tr><td><strong>Mesh</strong></td><td>2</td><td>Analyze complexity, LOD recommendations</td></tr><tr><td><strong>Advanced (Experimental)</strong></td><td>9</td><td>Project health check, error analysis, debugging strategy, unit tests, Blueprint logic review, comparison, refactoring, documentation</td></tr><tr><td><strong>Custom</strong></td><td>2</td><td>Free-form question, beginner-friendly explanations</td></tr></tbody></table>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="context-aware-prompts">Context-Aware Prompts<a href="#context-aware-prompts" class="hash-link" aria-label="Direct link to Context-Aware Prompts" title="Direct link to Context-Aware Prompts" translate="no">​</a></h4>
 <p>Some prompts in the <strong>Advanced (Experimental)</strong> group automatically attach real project data:</p>
 <ul>
@@ -311,6 +295,6 @@
 <li class="">Save — Orion automatically discovers all QuickPrompt libraries at startup</li>
 </ol>
 <p><strong>Screenshot Placeholder:</strong> <code>[Data Asset editor showing a custom QuickPromptLibrary with fields: TemplateName, PromptText, Description, AssetTypeFilter, ContextTags]</code></p>
-<hr></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/azimuth-orion/getting-started"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Getting Started</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/azimuth-orion/blueprint-analysis"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Blueprint Analysis</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#opening-orion" class="table-of-contents__link toc-highlight">Opening Orion</a></li><li><a href="#chat-interface-tour" class="table-of-contents__link toc-highlight">Chat Interface Tour</a></li><li><a href="#asking-questions" class="table-of-contents__link toc-highlight">Asking Questions</a></li><li><a href="#modes-orbital-c-mode-deep-scan" class="table-of-contents__link toc-highlight">Modes: Orbital, C++ Mode, Deep Scan</a><ul><li><a href="#orbital-ask-mode--default" class="table-of-contents__link toc-highlight">Orbital (Ask Mode) — Default</a></li><li><a href="#c-mode" class="table-of-contents__link toc-highlight">C++ Mode</a></li><li><a href="#deep-scan-blueprint-mode" class="table-of-contents__link toc-highlight">Deep Scan (Blueprint Mode)</a></li></ul></li><li><a href="#message-actions" class="table-of-contents__link toc-highlight">Message Actions</a></li><li><a href="#conversation-context-optional" class="table-of-contents__link toc-highlight">Conversation Context (Optional)</a></li><li><a href="#streaming-responses" class="table-of-contents__link toc-highlight">Streaming Responses</a></li><li><a href="#one-click-output-log" class="table-of-contents__link toc-highlight">One-Click Output Log</a></li><li><a href="#quickprompts" class="table-of-contents__link toc-highlight">QuickPrompts</a><ul><li><a href="#how-to-use-quickprompts" class="table-of-contents__link toc-highlight">How to Use QuickPrompts</a></li><li><a href="#available-groups" class="table-of-contents__link toc-highlight">Available Groups</a></li><li><a href="#context-aware-prompts" class="table-of-contents__link toc-highlight">Context-Aware Prompts</a></li><li><a href="#adding-your-own-quickprompts" class="table-of-contents__link toc-highlight">Adding Your Own QuickPrompts</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="site-footer"><div class="site-footer__overlay"></div><div class="site-footer__content"><img src="/img/cat6-wordmark.png" alt="Cat6 Digital" class="site-footer__logo"><p class="site-footer__copyright">© <!-- -->2026<!-- --> Cat6 Digital, LLC. All rights reserved. Cat6 Digital &amp; Cat6 Digital Logo, are trademarks or registered trademarks of Cat6 Digital, LLC in the United States of America and elsewhere. Any other brands or product names are the trademarks of their respective owners. All Rights Reserved.</p><p class="site-footer__legal">Our websites may contain links to other sites and resources provided by third parties. These links are provided for your convenience only. Cat6 Digital has no control over the contents of those sites or resources, and accepts no responsibility for them or for any loss or damage that may arise from your use of them.</p><a href="https://cat6digital.com/cat6-digital-privacy-policy/" class="site-footer__link" target="_self">Privacy Policy</a></div></footer></div>
+<hr></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/azimuth-orion/getting-started"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Getting Started</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/azimuth-orion/blueprint-analysis"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Blueprint Analysis</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#opening-orion" class="table-of-contents__link toc-highlight">Opening Orion</a></li><li><a href="#chat-interface-tour" class="table-of-contents__link toc-highlight">Chat Interface Tour</a></li><li><a href="#asking-questions" class="table-of-contents__link toc-highlight">Asking Questions</a></li><li><a href="#modes-orbital-and-deep-scan" class="table-of-contents__link toc-highlight">Modes: Orbital and Deep Scan</a><ul><li><a href="#orbital-ask-mode--default" class="table-of-contents__link toc-highlight">Orbital (Ask Mode) — Default</a></li><li><a href="#deep-scan-blueprint-mode" class="table-of-contents__link toc-highlight">Deep Scan (Blueprint Mode)</a></li></ul></li><li><a href="#message-actions" class="table-of-contents__link toc-highlight">Message Actions</a></li><li><a href="#conversation-context-optional" class="table-of-contents__link toc-highlight">Conversation Context (Optional)</a></li><li><a href="#streaming-responses" class="table-of-contents__link toc-highlight">Streaming Responses</a></li><li><a href="#one-click-output-log" class="table-of-contents__link toc-highlight">One-Click Output Log</a></li><li><a href="#quickprompts" class="table-of-contents__link toc-highlight">QuickPrompts</a><ul><li><a href="#how-to-use-quickprompts" class="table-of-contents__link toc-highlight">How to Use QuickPrompts</a></li><li><a href="#available-groups" class="table-of-contents__link toc-highlight">Available Groups</a></li><li><a href="#context-aware-prompts" class="table-of-contents__link toc-highlight">Context-Aware Prompts</a></li><li><a href="#adding-your-own-quickprompts" class="table-of-contents__link toc-highlight">Adding Your Own QuickPrompts</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="site-footer"><div class="site-footer__overlay"></div><div class="site-footer__content"><img src="/img/cat6-wordmark.png" alt="Cat6 Digital" class="site-footer__logo"><p class="site-footer__copyright">© <!-- -->2026<!-- --> Cat6 Digital, LLC. All rights reserved. Cat6 Digital &amp; Cat6 Digital Logo, are trademarks or registered trademarks of Cat6 Digital, LLC in the United States of America and elsewhere. Any other brands or product names are the trademarks of their respective owners. All Rights Reserved.</p><p class="site-footer__legal">Our websites may contain links to other sites and resources provided by third parties. These links are provided for your convenience only. Cat6 Digital has no control over the contents of those sites or resources, and accepts no responsibility for them or for any loss or damage that may arise from your use of them.</p><a href="https://cat6digital.com/cat6-digital-privacy-policy/" class="site-footer__link" target="_self">Privacy Policy</a></div></footer></div>
 </body>
 </html>
