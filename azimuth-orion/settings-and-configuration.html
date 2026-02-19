@@ -29,7 +29,7 @@
           background-position: center;
         }
       </style><link rel="stylesheet" href="/assets/css/styles.8d88fe9e.css">
-<script src="/assets/js/runtime~main.c422edea.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.698ef2f5.js" defer="defer"></script>
 <script src="/assets/js/main.0d73c3a4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -165,8 +165,10 @@
 <p><strong>Screenshot Placeholder:</strong> <code>[Disabled Models array showing entries: &quot;o1&quot;, &quot;claude-opus-4&quot; with + and - buttons visible]</code></p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="interface-category">Interface Category<a href="#interface-category" class="hash-link" aria-label="Direct link to Interface Category" title="Direct link to Interface Category" translate="no">​</a></h3>
 <p>Control how Orion displays responses and what context it includes with queries.</p>
+<p>The Interface category is organized into sub-sections with bold headers. Properties are indented under their sub-section, and collapsed child items are further indented for visual clarity. Dependent sub-settings <strong>collapse</strong> (disappear entirely) when their parent toggle is off — they are not dimmed.</p>
 <p><strong>Screenshot Placeholder:</strong> <code>[Settings showing Interface category expanded]</code></p>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="display-settings">Display Settings<a href="#display-settings" class="hash-link" aria-label="Direct link to Display Settings" title="Direct link to Display Settings" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="orion-chat">Orion Chat<a href="#orion-chat" class="hash-link" aria-label="Direct link to Orion Chat" title="Direct link to Orion Chat" translate="no">​</a></h4>
+<p>The <strong>Orion Chat</strong> sub-section appears first and contains the most commonly adjusted settings for the chat window.</p>
 <p><strong>Response Display Mode:</strong></p>
 <ul>
 <li class=""><strong>Rich Text (default):</strong> Formatted responses with bold, headers, code block styling</li>
@@ -188,32 +190,12 @@
 <ul>
 <li class=""><code>[Side-by-side comparison: Left side shows Rich Text response with bold headers, inline monospace in gray boxes, and code blocks. Right side shows same response in Plain Text with no formatting]</code></li>
 </ul>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="integration">Integration<a href="#integration" class="hash-link" aria-label="Direct link to Integration" title="Direct link to Integration" translate="no">​</a></h4>
-<p>These toggles live under the <strong>Integration</strong> bold header (indented in the UI):</p>
-<p><strong>Enable Right-Click Menu:</strong></p>
-<ul>
-<li class="">Shows/hides &quot;Azimuth Orion&quot; submenu in Content Browser</li>
-<li class="">Default: ON</li>
-<li class="">Turn OFF if you rarely use right-click analysis (declutter context menu)</li>
-</ul>
-<p><strong>Graph Analysis Uses Deep Scan Mode:</strong></p>
-<ul>
-<li class="">When analyzing from Blueprint toolbar, use Deep Scan mode and show toast</li>
-<li class="">Default: ON</li>
-</ul>
-<p><strong>Show Usage Tabulation (Experimental):</strong></p>
-<ul>
-<li class="">Displays token usage in chat window (estimated + actual from API)</li>
-<li class="">Shows: Last request tokens, session total</li>
-</ul>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="query-context">Query Context<a href="#query-context" class="hash-link" aria-label="Direct link to Query Context" title="Direct link to Query Context" translate="no">​</a></h4>
-<p>Context settings live under the <strong>Query Context</strong> bold header. Dependent sub-settings <strong>collapse</strong> (disappear entirely) when their parent toggle is off — they are not dimmed.</p>
-<p><strong>Note:</strong> Project name and engine version are <strong>always included</strong> in every query&#x27;s system message automatically. There is no toggle for this; it is always active.</p>
 <p><strong>Include Last Log Lines in Query:</strong></p>
 <ul>
 <li class="">Prepends recent Output Log lines to each query</li>
 <li class="">Essential for error troubleshooting</li>
-<li class="">When enabled, the following sub-settings appear:
+<li class="">Tooltip: <em>&quot;Useful for situationally debugging Output Log Errors. Recommend to use only when needed.&quot;</em></li>
+<li class="">When enabled, the following sub-settings appear (indented):
 <ul>
 <li class=""><strong>Last Log Lines Count:</strong> 1-200 lines (default: 20) — <em>hidden when parent toggle is off</em></li>
 <li class=""><strong>Send Full Log:</strong> Sends entire captured buffer instead of last N lines — <em>hidden when parent toggle is off</em></li>
@@ -232,22 +214,52 @@
 <p>You ask: &quot;What&#x27;s wrong?&quot;</p>
 <p>AI receives the log lines + your question, responds:
 <em>&quot;Based on your Output Log, you&#x27;re trying to access a variable &#x27;HealthWidget&#x27; that doesn&#x27;t exist in the Blueprint. You need to add a variable named &#x27;HealthWidget&#x27; (type: User Widget object reference) to BP_PlayerController.&quot;</em></p>
-<p><strong>Screenshot Placeholder:</strong> <code>[Settings showing Include Last Log Lines in Query checkbox checked, Last Log Lines Count and Send Full Log visible below it]</code></p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Settings showing Include Last Log Lines in Query checkbox checked, Last Log Lines Count and Send Full Log visible below it (indented)]</code></p>
+<p><strong>Enable Custom QuickPrompts:</strong></p>
+<ul>
+<li class="">Load additional QuickPrompt libraries from a custom folder</li>
+<li class="">When enabled, the following sub-setting appears (indented):
+<ul>
+<li class=""><strong>Custom QuickPrompts Path</strong> — Folder picker (text box + &quot;...&quot; browse button) for selecting a folder containing <code>UOrionQuickPromptLibrary</code> assets. The browse button opens an OS directory dialog defaulting to your project&#x27;s Content folder. — <em>hidden when toggle is off</em></li>
+</ul>
+</li>
+</ul>
+<p><strong>Show Usage Tabulation (Experimental):</strong></p>
+<ul>
+<li class="">Displays token usage in chat window (estimated + actual from API)</li>
+<li class="">Shows: Last request tokens, session total</li>
+</ul>
+<p><strong>Use Prompt Repetition (Experimental):</strong></p>
+<ul>
+<li class="">When enabled, Orion automatically repeats your prompt to the AI model before sending it, which has been shown to improve response quality for non-reasoning tasks.</li>
+<li class=""><strong>Orbital (Ask) mode only</strong> — does not apply to Deep Scan mode.</li>
+<li class="">Roughly doubles the input tokens per query (increases API cost). Output tokens and response time are unaffected.</li>
+<li class="">Default: OFF.</li>
+</ul>
+<p>When enabled, the following sub-settings appear (indented):</p>
+<ul>
+<li class=""><strong>Prompt Repetition Token Threshold</strong> — If your message exceeds this estimated token count (default: 8000), repetition is automatically skipped to avoid context overflow. Range: 500–32000. <em>Hidden when toggle is off.</em></li>
+<li class=""><strong>Description text</strong> — An explanatory note is displayed: <em>&quot;Best used with Non-Reasoning models, this enables each prompt token to attend to every other prompt token. When not using reasoning, prompt repetition improves the performance of LLMs without increasing the lengths of the generated outputs or latency.&quot;</em> — <a href="https://arxiv.org/abs/2512.14982v1" target="_blank" rel="noopener noreferrer" class="">Google Research, arXiv 2512.14982</a></li>
+</ul>
+<p><strong>Visual indicator:</strong> When Prompt Repetition is enabled, a visual indicator is displayed in the chat window to remind you the feature is active. The indicator&#x27;s visibility is driven by <code>Is Prompt Repetition Enabled</code> on the chat widget.</p>
+<p><strong>Note:</strong> Project name and engine version are <strong>always included</strong> in every query&#x27;s system message automatically. There is no toggle for this; it is always active.</p>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="integration">Integration<a href="#integration" class="hash-link" aria-label="Direct link to Integration" title="Direct link to Integration" translate="no">​</a></h4>
+<p>These toggles live under the <strong>Integration</strong> bold header (indented in the UI):</p>
+<p><strong>Enable Right-Click Menu:</strong></p>
+<ul>
+<li class="">Shows/hides &quot;Azimuth Orion&quot; submenu in Content Browser</li>
+<li class="">Default: ON</li>
+<li class="">Turn OFF if you rarely use right-click analysis (declutter context menu)</li>
+</ul>
+<p><strong>Graph Analysis Uses Deep Scan Mode:</strong></p>
+<ul>
+<li class="">When analyzing from Blueprint toolbar, use Deep Scan mode and show toast</li>
+<li class="">Default: ON</li>
+</ul>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="mode-context">Mode Context<a href="#mode-context" class="hash-link" aria-label="Direct link to Mode Context" title="Direct link to Mode Context" translate="no">​</a></h4>
 <p><strong>Deep Scan Mode Context</strong> and <strong>Orbital (Ask) Mode Context</strong> — custom system message prompts for each mode (multi-line text fields).</p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="logging">Logging<a href="#logging" class="hash-link" aria-label="Direct link to Logging" title="Direct link to Logging" translate="no">​</a></h4>
 <p><strong>Log Format</strong>, <strong>Log Directory</strong>, and <strong>Auto-export Chat Log</strong> — chat export settings.</p>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="quickprompts">QuickPrompts<a href="#quickprompts" class="hash-link" aria-label="Direct link to QuickPrompts" title="Direct link to QuickPrompts" translate="no">​</a></h4>
-<p>QuickPrompts settings are now under the <strong>Interface</strong> category (previously a separate category).</p>
-<p><strong>Enable Custom QuickPrompts:</strong></p>
-<ul>
-<li class="">Load additional QuickPrompt libraries from a custom folder</li>
-<li class="">When enabled, the following sub-setting appears:
-<ul>
-<li class=""><strong>Custom QuickPrompts Path</strong> — Folder containing <code>UOrionQuickPromptLibrary</code> assets — <em>hidden when toggle is off</em></li>
-</ul>
-</li>
-</ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="blueprint-context-category">Blueprint Context Category<a href="#blueprint-context-category" class="hash-link" aria-label="Direct link to Blueprint Context Category" title="Direct link to Blueprint Context Category" translate="no">​</a></h3>
 <p>Controls how Blueprint analysis works.</p>
 <p><strong>Screenshot Placeholder:</strong> <code>[Settings showing Blueprint Context category]</code></p>
@@ -272,13 +284,20 @@
 <li class="">Default: <code>&quot;Blueprint context for {BlueprintName}. Please acknowledge that you received it and ask what I would like to know about it.&quot;</code></li>
 <li class="">Advanced users can customize to change AI behavior</li>
 </ul>
-<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="eda-integration-category">EDA Integration Category<a href="#eda-integration-category" class="hash-link" aria-label="Direct link to EDA Integration Category" title="Direct link to EDA Integration Category" translate="no">​</a></h3>
+<h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="eda-integration-experimental-category">EDA Integration (Experimental) Category<a href="#eda-integration-experimental-category" class="hash-link" aria-label="Direct link to EDA Integration (Experimental) Category" title="Direct link to EDA Integration (Experimental) Category" translate="no">​</a></h3>
 <p>Export Blueprint context to Epic Developer Assistant (EDA).</p>
+<p><strong>Note:</strong> This feature is experimental. The EDA API is not yet available, so this integration uses clipboard copy and local JSON export to facilitate the transfer of data between Orion and external AI tools.</p>
 <p><strong>Enable EDA Integration:</strong></p>
 <ul>
 <li class="">Default: ON</li>
 <li class="">Shows &quot;EDA&quot; destination option in Blueprint toolbar Send dropdown</li>
 <li class="">Allows exporting Blueprint context as JSON</li>
+<li class="">When enabled, the following sub-settings appear (indented):
+<ul>
+<li class=""><strong>EDA Context Export Path</strong> — Custom path for EDA JSON exports (empty = default)</li>
+<li class=""><strong>Copy to Clipboard on EDA Export</strong> — Also copies JSON to clipboard when exporting</li>
+</ul>
+</li>
 </ul>
 <p><strong>EDA Context Export Path:</strong></p>
 <ul>
@@ -301,6 +320,6 @@
 <li class="">Faster analysis (no re-parsing if Blueprint hasn&#x27;t changed)</li>
 <li class="">Currently experimental</li>
 </ul>
-<hr></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/azimuth-orion/modes-and-context"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Modes and Context</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/azimuth-orion/blueprint-toolbar-features"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Blueprint Toolbar Features</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#opening-settings" class="table-of-contents__link toc-highlight">Opening Settings</a></li><li><a href="#ai-configuration-category" class="table-of-contents__link toc-highlight">AI Configuration Category</a><ul><li><a href="#model-selection" class="table-of-contents__link toc-highlight">Model Selection</a></li><li><a href="#request-settings" class="table-of-contents__link toc-highlight">Request Settings</a></li><li><a href="#other-settings" class="table-of-contents__link toc-highlight">Other Settings</a></li><li><a href="#custom-endpoint-ollama--lm-studio--local-models" class="table-of-contents__link toc-highlight">Custom Endpoint (Ollama / LM Studio / Local Models)</a></li></ul></li><li><a href="#ai-providers-category" class="table-of-contents__link toc-highlight">AI Providers Category</a><ul><li><a href="#enabledisable-providers" class="table-of-contents__link toc-highlight">Enable/Disable Providers</a></li><li><a href="#per-provider-settings" class="table-of-contents__link toc-highlight">Per-Provider Settings</a></li><li><a href="#disabled-models" class="table-of-contents__link toc-highlight">Disabled Models</a></li></ul></li><li><a href="#interface-category" class="table-of-contents__link toc-highlight">Interface Category</a><ul><li><a href="#display-settings" class="table-of-contents__link toc-highlight">Display Settings</a></li><li><a href="#integration" class="table-of-contents__link toc-highlight">Integration</a></li><li><a href="#query-context" class="table-of-contents__link toc-highlight">Query Context</a></li><li><a href="#mode-context" class="table-of-contents__link toc-highlight">Mode Context</a></li><li><a href="#logging" class="table-of-contents__link toc-highlight">Logging</a></li><li><a href="#quickprompts" class="table-of-contents__link toc-highlight">QuickPrompts</a></li></ul></li><li><a href="#blueprint-context-category" class="table-of-contents__link toc-highlight">Blueprint Context Category</a></li><li><a href="#eda-integration-category" class="table-of-contents__link toc-highlight">EDA Integration Category</a></li><li><a href="#project-indexing-category" class="table-of-contents__link toc-highlight">Project Indexing Category</a></li></ul></div></div></div></div></main></div></div></div><footer class="site-footer"><div class="site-footer__overlay"></div><div class="site-footer__content"><img src="/img/cat6-wordmark.png" alt="Cat6 Digital" class="site-footer__logo"><p class="site-footer__copyright">© <!-- -->2026<!-- --> Cat6 Digital, LLC. All rights reserved. Cat6 Digital &amp; Cat6 Digital Logo, are trademarks or registered trademarks of Cat6 Digital, LLC in the United States of America and elsewhere. Any other brands or product names are the trademarks of their respective owners. All Rights Reserved.</p><p class="site-footer__legal">Our websites may contain links to other sites and resources provided by third parties. These links are provided for your convenience only. Cat6 Digital has no control over the contents of those sites or resources, and accepts no responsibility for them or for any loss or damage that may arise from your use of them.</p><a href="https://cat6digital.com/cat6-digital-privacy-policy/" class="site-footer__link" target="_self">Privacy Policy</a></div></footer></div>
+<hr></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/azimuth-orion/modes-and-context"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Modes and Context</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/azimuth-orion/blueprint-toolbar-features"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Blueprint Toolbar Features</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#opening-settings" class="table-of-contents__link toc-highlight">Opening Settings</a></li><li><a href="#ai-configuration-category" class="table-of-contents__link toc-highlight">AI Configuration Category</a><ul><li><a href="#model-selection" class="table-of-contents__link toc-highlight">Model Selection</a></li><li><a href="#request-settings" class="table-of-contents__link toc-highlight">Request Settings</a></li><li><a href="#other-settings" class="table-of-contents__link toc-highlight">Other Settings</a></li><li><a href="#custom-endpoint-ollama--lm-studio--local-models" class="table-of-contents__link toc-highlight">Custom Endpoint (Ollama / LM Studio / Local Models)</a></li></ul></li><li><a href="#ai-providers-category" class="table-of-contents__link toc-highlight">AI Providers Category</a><ul><li><a href="#enabledisable-providers" class="table-of-contents__link toc-highlight">Enable/Disable Providers</a></li><li><a href="#per-provider-settings" class="table-of-contents__link toc-highlight">Per-Provider Settings</a></li><li><a href="#disabled-models" class="table-of-contents__link toc-highlight">Disabled Models</a></li></ul></li><li><a href="#interface-category" class="table-of-contents__link toc-highlight">Interface Category</a><ul><li><a href="#orion-chat" class="table-of-contents__link toc-highlight">Orion Chat</a></li><li><a href="#integration" class="table-of-contents__link toc-highlight">Integration</a></li><li><a href="#mode-context" class="table-of-contents__link toc-highlight">Mode Context</a></li><li><a href="#logging" class="table-of-contents__link toc-highlight">Logging</a></li></ul></li><li><a href="#blueprint-context-category" class="table-of-contents__link toc-highlight">Blueprint Context Category</a></li><li><a href="#eda-integration-experimental-category" class="table-of-contents__link toc-highlight">EDA Integration (Experimental) Category</a></li><li><a href="#project-indexing-category" class="table-of-contents__link toc-highlight">Project Indexing Category</a></li></ul></div></div></div></div></main></div></div></div><footer class="site-footer"><div class="site-footer__overlay"></div><div class="site-footer__content"><img src="/img/cat6-wordmark.png" alt="Cat6 Digital" class="site-footer__logo"><p class="site-footer__copyright">© <!-- -->2026<!-- --> Cat6 Digital, LLC. All rights reserved. Cat6 Digital &amp; Cat6 Digital Logo, are trademarks or registered trademarks of Cat6 Digital, LLC in the United States of America and elsewhere. Any other brands or product names are the trademarks of their respective owners. All Rights Reserved.</p><p class="site-footer__legal">Our websites may contain links to other sites and resources provided by third parties. These links are provided for your convenience only. Cat6 Digital has no control over the contents of those sites or resources, and accepts no responsibility for them or for any loss or damage that may arise from your use of them.</p><a href="https://cat6digital.com/cat6-digital-privacy-policy/" class="site-footer__link" target="_self">Privacy Policy</a></div></footer></div>
 </body>
 </html>
