@@ -56,7 +56,7 @@
         .theme-doc-markdown.markdown ul,
         .theme-doc-markdown.markdown ol { margin-top: 1rem !important; margin-bottom: 1.5rem !important; }
       </style><link rel="stylesheet" href="/assets/css/styles.694f6935.css">
-<script src="/assets/js/runtime~main.0ba09961.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.8cb146e7.js" defer="defer"></script>
 <script src="/assets/js/main.a4c4074e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -115,20 +115,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Model ID</th><th>Display Name</th><th>Context Window</th><th>Max Output</th><th>Vision</th><th>Cost Tier</th><th>Default Timeout</th></tr></thead><tbody><tr><td>grok-code-fast-1</td><td>Grok Code Fast</td><td>128k tokens</td><td>32k</td><td>No</td><td>Very Low</td><td>60s</td></tr><tr><td>grok-3</td><td>Grok 3</td><td>131k tokens</td><td>32k</td><td>No</td><td>Low</td><td>75s</td></tr><tr><td>grok-4</td><td>Grok 4</td><td>256k tokens</td><td>32k</td><td>No</td><td>Medium</td><td>90s</td></tr><tr><td>grok-4-turbo</td><td>Grok 4 Turbo</td><td>256k tokens</td><td>32k</td><td>No</td><td>Medium</td><td>90s</td></tr><tr><td>grok-vision</td><td>Grok Vision</td><td>128k tokens</td><td>32k</td><td>Yes</td><td>Medium</td><td>75s</td></tr></tbody></table>
+<table><thead><tr><th>Model ID</th><th>Display Name</th><th>Context Window</th><th>Max Output</th><th>Vision</th><th>Cost Tier</th><th>Default Timeout</th></tr></thead><tbody><tr><td>grok-4</td><td>Grok 4</td><td>256k tokens</td><td>131k</td><td>Yes</td><td>High</td><td>90s</td></tr><tr><td>grok-4-1-fast-reasoning</td><td>Grok 4.1 Fast Reasoning</td><td>2M tokens</td><td>131k</td><td>Yes</td><td>Very Low</td><td>45s</td></tr><tr><td>grok-4-1-fast-non-reasoning</td><td>Grok 4.1 Fast</td><td>2M tokens</td><td>131k</td><td>Yes</td><td>Very Low</td><td>30s</td></tr><tr><td>grok-code-fast-1</td><td>Grok Code Fast</td><td>256k tokens</td><td>32k</td><td>No</td><td>Low</td><td>60s</td></tr></tbody></table>
 <p><strong>Notes:</strong></p>
 <ul>
-<li class=""><strong>grok-code-fast-1:</strong> Best value for general UE5 questions</li>
-<li class=""><strong>grok-vision:</strong> Best xAI option for screenshots</li>
+<li class=""><strong>grok-code-fast-1:</strong> Code-optimized, agentic coding (default for xAI)</li>
+<li class=""><strong>grok-4:</strong> Flagship, highest quality reasoning</li>
+<li class=""><strong>grok-4-1-fast-reasoning / grok-4-1-fast-non-reasoning:</strong> 2M context, vision support</li>
 </ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="openai">OpenAI<a href="#openai" class="hash-link" aria-label="Direct link to OpenAI" title="Direct link to OpenAI" translate="no">​</a></h3>
 
@@ -190,30 +182,12 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Model ID</th><th>Display Name</th><th>Context Window</th><th>Max Output</th><th>Vision</th><th>Cost Tier</th><th>Default Timeout</th></tr></thead><tbody><tr><td>gpt-4o</td><td>GPT-4o</td><td>128k tokens</td><td>16k</td><td>Yes</td><td>High</td><td>60s</td></tr><tr><td>gpt-4o-mini</td><td>GPT-4o Mini</td><td>128k tokens</td><td>16k</td><td>Yes</td><td>Low</td><td>60s</td></tr><tr><td>gpt-4-turbo</td><td>GPT-4 Turbo</td><td>128k tokens</td><td>4k</td><td>Yes</td><td>High</td><td>60s</td></tr><tr><td>gpt-3.5-turbo</td><td>GPT-3.5 Turbo</td><td>16k tokens</td><td>4k</td><td>No</td><td>Very Low</td><td>30s</td></tr><tr><td>o1</td><td>o1</td><td>128k tokens</td><td>32k</td><td>No</td><td>Very High</td><td>90s</td></tr><tr><td>o1-mini</td><td>o1 Mini</td><td>128k tokens</td><td>32k</td><td>No</td><td>High</td><td>60s</td></tr><tr><td>o3-mini</td><td>o3 Mini</td><td>128k tokens</td><td>32k</td><td>No</td><td>High</td><td>60s</td></tr></tbody></table>
+<table><thead><tr><th>Model ID</th><th>Display Name</th><th>Context Window</th><th>Max Output</th><th>Vision</th><th>Cost Tier</th><th>Default Timeout</th></tr></thead><tbody><tr><td>gpt-5.2</td><td>GPT-5.2</td><td>400k tokens</td><td>32k</td><td>Yes</td><td>High</td><td>90s</td></tr><tr><td>gpt-5-mini</td><td>GPT-5 mini</td><td>128k tokens</td><td>16k</td><td>Yes</td><td>Low</td><td>60s</td></tr><tr><td>gpt-5-nano</td><td>GPT-5 nano</td><td>128k tokens</td><td>8k</td><td>No</td><td>Very Low</td><td>45s</td></tr><tr><td>gpt-5.3-codex</td><td>GPT-5.3 Codex</td><td>400k tokens</td><td>32k</td><td>Yes</td><td>High</td><td>90s</td></tr><tr><td>o4-mini</td><td>o4-mini</td><td>200k tokens</td><td>64k</td><td>Yes</td><td>Low</td><td>60s</td></tr></tbody></table>
 <p><strong>Notes:</strong></p>
 <ul>
-<li class=""><strong>GPT-4o:</strong> Industry standard for vision, excellent quality</li>
-<li class=""><strong>GPT-4o mini:</strong> Budget-friendly with vision support</li>
-<li class=""><strong>o1 series:</strong> Advanced reasoning, very expensive</li>
+<li class=""><strong>gpt-5.2:</strong> Best for coding and agentic tasks (flagship)</li>
+<li class=""><strong>gpt-5-mini:</strong> Faster, cost-efficient for well-defined tasks</li>
+<li class=""><strong>o4-mini:</strong> Fast reasoning model with vision</li>
 </ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="anthropic-claude">Anthropic (Claude)<a href="#anthropic-claude" class="hash-link" aria-label="Direct link to Anthropic (Claude)" title="Direct link to Anthropic (Claude)" translate="no">​</a></h3>
 
@@ -266,11 +240,21 @@
 
 
 
-<table><thead><tr><th>Model ID</th><th>Display Name</th><th>Context Window</th><th>Max Output</th><th>Vision</th><th>Cost Tier</th><th>Default Timeout</th></tr></thead><tbody><tr><td>claude-opus-4</td><td>Claude Opus 4</td><td>200k tokens</td><td>16k</td><td>Yes</td><td>Very High</td><td>90s</td></tr><tr><td>claude-sonnet-4-5</td><td>Claude Sonnet 4.5</td><td>200k tokens</td><td>16k</td><td>Yes</td><td>High</td><td>75s</td></tr><tr><td>claude-3-5-sonnet</td><td>Claude 3.5 Sonnet</td><td>200k tokens</td><td>8k</td><td>Yes</td><td>Medium</td><td>75s</td></tr><tr><td>claude-haiku-4</td><td>Claude Haiku 4</td><td>200k tokens</td><td>8k</td><td>Yes</td><td>Low</td><td>60s</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model ID</th><th>Display Name</th><th>Context Window</th><th>Max Output</th><th>Vision</th><th>Cost Tier</th><th>Default Timeout</th></tr></thead><tbody><tr><td>claude-opus-4-6</td><td>Claude Opus 4.6</td><td>200k tokens</td><td>128k</td><td>Yes</td><td>Very High</td><td>120s</td></tr><tr><td>claude-opus-4-5</td><td>Claude Opus 4.5</td><td>200k tokens</td><td>64k</td><td>Yes</td><td>Very High</td><td>120s</td></tr><tr><td>claude-sonnet-4-6</td><td>Claude Sonnet 4.6</td><td>200k tokens</td><td>64k</td><td>Yes</td><td>Medium</td><td>75s</td></tr><tr><td>claude-sonnet-4-5</td><td>Claude Sonnet 4.5</td><td>200k tokens</td><td>64k</td><td>Yes</td><td>Medium</td><td>75s</td></tr><tr><td>claude-haiku-4-5</td><td>Claude Haiku 4.5</td><td>200k tokens</td><td>64k</td><td>Yes</td><td>Low</td><td>45s</td></tr></tbody></table>
 <p><strong>Notes:</strong></p>
 <ul>
-<li class=""><strong>Claude Opus 4:</strong> Top-tier quality, 200k context window (huge Blueprints)</li>
-<li class=""><strong>Claude 3.5 Sonnet:</strong> Excellent balance of speed, cost, and quality</li>
+<li class=""><strong>claude-sonnet-4-5:</strong> Best speed/intelligence balance (default for Anthropic)</li>
+<li class=""><strong>claude-opus-4-6:</strong> Most intelligent, Adaptive Thinking</li>
+<li class=""><strong>claude-sonnet-4-6:</strong> Latest Sonnet, best value (Feb 2026)</li>
 </ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="google-gemini">Google (Gemini)<a href="#google-gemini" class="hash-link" aria-label="Direct link to Google (Gemini)" title="Direct link to Google (Gemini)" translate="no">​</a></h3>
 
@@ -314,11 +298,30 @@
 
 
 
-<table><thead><tr><th>Model ID</th><th>Display Name</th><th>Context Window</th><th>Max Output</th><th>Vision</th><th>Cost Tier</th><th>Default Timeout</th></tr></thead><tbody><tr><td>gemini-pro-1.5</td><td>Gemini Pro 1.5</td><td>1M+ tokens</td><td>32k</td><td>Yes</td><td>Medium</td><td>90s</td></tr><tr><td>gemini-flash-1.5</td><td>Gemini Flash 1.5</td><td>1M+ tokens</td><td>32k</td><td>Yes</td><td>Low</td><td>60s</td></tr><tr><td>gemini-pro-vision</td><td>Gemini Pro Vision</td><td>128k tokens</td><td>8k</td><td>Yes</td><td>Medium</td><td>75s</td></tr></tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Model ID</th><th>Display Name</th><th>Context Window</th><th>Max Output</th><th>Vision</th><th>Cost Tier</th><th>Default Timeout</th></tr></thead><tbody><tr><td>gemini-3-pro-preview</td><td>Gemini 3 Pro (Preview)</td><td>1M tokens</td><td>65k</td><td>Yes</td><td>High</td><td>90s</td></tr><tr><td>gemini-3-flash-preview</td><td>Gemini 3 Flash (Preview)</td><td>1M tokens</td><td>65k</td><td>Yes</td><td>Low</td><td>60s</td></tr><tr><td>gemini-3.1-pro-preview</td><td>Gemini 3.1 Pro (Preview)</td><td>1M tokens</td><td>65k</td><td>Yes</td><td>High</td><td>90s</td></tr><tr><td>gemini-2.5-pro</td><td>Gemini 2.5 Pro</td><td>1M tokens</td><td>65k</td><td>Yes</td><td>Medium</td><td>90s</td></tr><tr><td>gemini-2.5-flash</td><td>Gemini 2.5 Flash</td><td>1M tokens</td><td>65k</td><td>Yes</td><td>Low</td><td>60s</td></tr></tbody></table>
 <p><strong>Notes:</strong></p>
 <ul>
-<li class=""><strong>Gemini Pro 1.5:</strong> Massive context window (1M+ tokens—can fit entire codebases)</li>
-<li class=""><strong>Gemini Flash 1.5:</strong> Fast, low cost, still huge context</li>
+<li class=""><strong>gemini-2.5-flash:</strong> Price-performance (default for Google)</li>
+<li class=""><strong>gemini-2.5-pro:</strong> Advanced reasoning (Stable)</li>
+<li class=""><strong>gemini-3.x:</strong> Preview models with 1M context</li>
 </ul>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="legend">Legend<a href="#legend" class="hash-link" aria-label="Direct link to Legend" title="Direct link to Legend" translate="no">​</a></h3>
 <p><strong>Context Window:</strong> Maximum input tokens (your question + attached context)<br>

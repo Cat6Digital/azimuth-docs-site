@@ -56,7 +56,7 @@
         .theme-doc-markdown.markdown ul,
         .theme-doc-markdown.markdown ol { margin-top: 1rem !important; margin-bottom: 1.5rem !important; }
       </style><link rel="stylesheet" href="/assets/css/styles.694f6935.css">
-<script src="/assets/js/runtime~main.0ba09961.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.8cb146e7.js" defer="defer"></script>
 <script src="/assets/js/main.a4c4074e.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -81,7 +81,7 @@
 <li class="">Disabled providers&#x27; models are hidden</li>
 <li class="">Models in the &quot;Disabled Models&quot; list are hidden</li>
 </ul>
-<p><strong>Screenshot Placeholder:</strong> <code>[Model ID dropdown expanded showing available models: grok-code-fast-1, grok-3, grok-4, GPT-4o, GPT-4o mini, Claude Sonnet 4.5, etc. Tooltip visible on &quot;GPT-4o&quot; showing: &quot;Context: 128k tokens, Max Output: 16k, Vision: Yes, Cost: High&quot;]</code></p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Model ID dropdown expanded showing available models: grok-code-fast-1, grok-4, gpt-5.2, gpt-5-mini, Claude Sonnet 4.5, etc. Tooltip visible on &quot;gpt-5.2&quot; showing: &quot;Context: 400k tokens, Max Output: 32k, Vision: Yes, Cost: High&quot;]</code></p>
 <h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="request-settings">Request Settings<a href="#request-settings" class="hash-link" aria-label="Direct link to Request Settings" title="Direct link to Request Settings" translate="no">​</a></h4>
 <p><strong>Max Output Tokens:</strong></p>
 <ul>
@@ -116,26 +116,26 @@
 <li class="">You don&#x27;t need to edit this</li>
 <li class="">To clear: Use &quot;Clear server history&quot; button</li>
 </ul>
-<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="custom-endpoint">Custom Endpoint (Ollama / LM Studio / Local Models)<a href="#custom-endpoint" class="hash-link" aria-label="Direct link to Custom Endpoint (Ollama / LM Studio / Local Models)" title="Direct link to Custom Endpoint (Ollama / LM Studio / Local Models)" translate="no">​</a></h4>
+<h4 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="custom-endpoint">Custom Endpoint (OpenAI-Compatible APIs)<a href="#custom-endpoint" class="hash-link" aria-label="Direct link to Custom Endpoint (OpenAI-Compatible APIs)" title="Direct link to Custom Endpoint (OpenAI-Compatible APIs)" translate="no">​</a></h4>
 <p>Orion supports connecting to any OpenAI-compatible API endpoint. These settings are in the <strong>AI Configuration</strong> category, below the standard model settings. The <strong>URL, Model ID, and Skip Auth fields collapse</strong> (hidden entirely) until you enable the &quot;Use Custom Endpoint&quot; toggle.</p>
+<p><strong>Security requirements:</strong></p>
+<ul>
+<li class=""><strong>HTTPS only</strong> — HTTP URLs are rejected (SSRF prevention)</li>
+<li class=""><strong>No localhost or private IPs</strong> — localhost, 127.0.0.1, and private IP ranges (10.x, 192.168.x, 172.16–31.x) are blocked</li>
+<li class="">For local models (Ollama, LM Studio): use an HTTPS reverse proxy or tunnel (e.g., ngrok, cloudflared) to expose your local server over HTTPS</li>
+</ul>
 <p><strong>How to set up:</strong></p>
 <ol>
 <li class="">Go to Settings &gt; AI Configuration</li>
 <li class="">Check <strong>Use Custom Endpoint</strong> — the sub-fields appear</li>
-<li class="">Enter the <strong>Custom Endpoint URL</strong> — the base URL of your local server:
-<ul>
-<li class="">Ollama: <code>http://localhost:11434/v1</code></li>
-<li class="">LM Studio: <code>http://localhost:1234/v1</code></li>
-<li class="">Other OpenAI-compatible: <code>http://your-server:port/v1</code></li>
-</ul>
-</li>
+<li class="">Enter the <strong>Custom Endpoint URL</strong> — must be HTTPS (e.g., <code>https://your-proxy.example.com/v1</code>)</li>
 <li class="">Enter the <strong>Custom Model ID</strong> — the model name your server uses:
 <ul>
 <li class="">Examples: <code>llama3</code>, <code>mistral</code>, <code>codestral</code>, <code>deepseek-coder</code></li>
 <li class="">This model appears in the Model dropdown with a &quot;(Custom)&quot; suffix</li>
 </ul>
 </li>
-<li class="">(Optional) Check <strong>Skip Auth for Custom Endpoint</strong> if your local server doesn&#x27;t require an API key</li>
+<li class="">(Optional) Check <strong>Skip Auth for Custom Endpoint</strong> if your server doesn&#x27;t require an API key</li>
 </ol>
 <p><strong>Using your custom model:</strong></p>
 <ul>
@@ -147,10 +147,10 @@
 <ul>
 <li class="">Your custom server must be OpenAI API-compatible (accepting <code>/chat/completions</code> requests)</li>
 <li class="">Trailing slashes in the URL are stripped automatically</li>
-<li class="">Local models may be slower; the default timeout for custom models is 120 seconds</li>
+<li class="">The default timeout for custom models is 120 seconds</li>
 <li class=""><em><strong>Not all Orion features may be available with custom models, and due to the wide variances in them (hundreds exist) these are not things we can support - use at your own risk.</strong></em></li>
 </ul>
-<p><strong>Screenshot Placeholder:</strong> <code>[AI Configuration settings showing &quot;Custom Endpoint&quot; section with &quot;Use Custom Endpoint&quot; checked, URL field showing &quot;http://localhost:11434/v1&quot;, Custom Model ID field showing &quot;llama3&quot;, and &quot;Skip Auth&quot; checked]</code></p>
+<p><strong>Screenshot Placeholder:</strong> <code>[AI Configuration settings showing &quot;Custom Endpoint&quot; section with &quot;Use Custom Endpoint&quot; checked, URL field showing &quot;https://your-proxy.example.com/v1&quot;, Custom Model ID field showing &quot;llama3&quot;, and &quot;Skip Auth&quot; checked]</code></p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="ai-providers-category">AI Providers Category<a href="#ai-providers-category" class="hash-link" aria-label="Direct link to AI Providers Category" title="Direct link to AI Providers Category" translate="no">​</a></h3>
 <p>Control which AI providers are available and manage API keys. Each provider is separated by a thin horizontal line, and <strong>sub-rows (API Key, Expiration, Models) collapse when the provider is disabled</strong> — they disappear entirely rather than being dimmed.</p>
 <p><strong>Screenshot Placeholder:</strong> <code>[Settings showing AI Providers category with all 4 provider subsections visible: xAI, OpenAI, Anthropic, Google, separated by horizontal dividers]</code></p>
@@ -185,7 +185,7 @@
 </ul>
 <p><strong>Key Expiry:</strong></p>
 <ul>
-<li class=""><strong>[Provider] Key Expiry (Days):</strong> 3-90 days, or -1 for unlimited</li>
+<li class=""><strong>[Provider] Key Expiry (Days):</strong> -1 to 90 days (30 = default, -1 = unlimited)</li>
 <li class="">Default: 30 days</li>
 <li class="">Timer starts from last validation</li>
 <li class="">After expiry, Orion warns you to re-validate</li>
@@ -195,15 +195,16 @@
 <p><strong>Disabled Models array:</strong></p>
 <ul>
 <li class="">List of model IDs to hide from dropdown (even if their provider is enabled)</li>
-<li class="">Use case: &quot;I have OpenAI enabled but I don&#x27;t want expensive o1 models available—only show GPT-4o and GPT-4o mini&quot;</li>
+<li class="">Example: &quot;o4-mini&quot;, &quot;claude-opus-4-6&quot;</li>
+<li class="">Use case: &quot;I have OpenAI enabled but I don&#x27;t want expensive o4-mini available—only show gpt-5.2 and gpt-5-mini&quot;</li>
 </ul>
 <p><strong>How to use:</strong></p>
 <ol>
 <li class="">Click the &quot;+&quot; button to add an entry</li>
-<li class="">Type the model ID exactly (e.g., &quot;o1&quot;, &quot;claude-opus-4&quot;)</li>
+<li class="">Type the model ID exactly (e.g., &quot;o4-mini&quot;, &quot;claude-opus-4-6&quot;)</li>
 <li class="">That model disappears from the Model ID dropdown</li>
 </ol>
-<p><strong>Screenshot Placeholder:</strong> <code>[Disabled Models array showing entries: &quot;o1&quot;, &quot;claude-opus-4&quot; with + and - buttons visible]</code></p>
+<p><strong>Screenshot Placeholder:</strong> <code>[Disabled Models array showing entries: &quot;o4-mini&quot;, &quot;claude-opus-4-6&quot; with + and - buttons visible]</code></p>
 <h3 class="anchor anchorTargetHideOnScrollNavbar_vjPI" id="interface-category">Interface Category<a href="#interface-category" class="hash-link" aria-label="Direct link to Interface Category" title="Direct link to Interface Category" translate="no">​</a></h3>
 <p>Control how Orion displays responses and what context it includes with queries.</p>
 <p>The Interface category is organized into sub-sections with bold headers. Properties are indented under their sub-section, and collapsed child items are further indented for visual clarity. Dependent sub-settings <strong>collapse</strong> (disappear entirely) when their parent toggle is off — they are not dimmed.</p>
@@ -368,6 +369,6 @@
 <li class="">Faster analysis (no re-parsing if Blueprint hasn&#x27;t changed)</li>
 <li class="">Currently experimental</li>
 </ul>
-<hr></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/azimuth-orion/07-modes-and-context"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Modes and Context</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/azimuth-orion/09-graph-editor-toolbar-features"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Graph Editor Toolbar Features</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#opening-settings" class="table-of-contents__link toc-highlight">Opening Settings</a></li><li><a href="#ai-configuration-category" class="table-of-contents__link toc-highlight">AI Configuration Category</a><ul><li><a href="#model-selection" class="table-of-contents__link toc-highlight">Model Selection</a></li><li><a href="#request-settings" class="table-of-contents__link toc-highlight">Request Settings</a></li><li><a href="#temperature-control" class="table-of-contents__link toc-highlight">Temperature Control</a></li><li><a href="#other-settings" class="table-of-contents__link toc-highlight">Other Settings</a></li><li><a href="#custom-endpoint" class="table-of-contents__link toc-highlight">Custom Endpoint (Ollama / LM Studio / Local Models)</a></li></ul></li><li><a href="#ai-providers-category" class="table-of-contents__link toc-highlight">AI Providers Category</a><ul><li><a href="#enabledisable-providers" class="table-of-contents__link toc-highlight">Enable/Disable Providers</a></li><li><a href="#per-provider-settings" class="table-of-contents__link toc-highlight">Per-Provider Settings</a></li><li><a href="#disabled-models" class="table-of-contents__link toc-highlight">Disabled Models</a></li></ul></li><li><a href="#interface-category" class="table-of-contents__link toc-highlight">Interface Category</a><ul><li><a href="#orion-chat" class="table-of-contents__link toc-highlight">Orion Chat</a></li><li><a href="#integration" class="table-of-contents__link toc-highlight">Integration</a></li><li><a href="#mode-context" class="table-of-contents__link toc-highlight">Mode Context</a></li><li><a href="#logging" class="table-of-contents__link toc-highlight">Logging</a></li></ul></li><li><a href="#blueprint-context-category" class="table-of-contents__link toc-highlight">Blueprint Context Category</a></li><li><a href="#eda-integration-experimental-category" class="table-of-contents__link toc-highlight">EDA Integration (Experimental) Category</a></li><li><a href="#project-indexing-category" class="table-of-contents__link toc-highlight">Project Indexing Category</a></li></ul></div></div></div></div></main></div></div></div><footer class="site-footer"><div class="site-footer__overlay"></div><div class="site-footer__content"><img src="/img/cat6-wordmark.png" alt="Cat6 Digital" class="site-footer__logo"><p class="site-footer__copyright">© <!-- -->2026<!-- --> Cat6 Digital, LLC. All rights reserved. Cat6 Digital &amp; Cat6 Digital Logo, are trademarks or registered trademarks of Cat6 Digital, LLC in the United States of America and elsewhere. Any other brands or product names are the trademarks of their respective owners. All Rights Reserved.</p><p class="site-footer__legal">Our websites may contain links to other sites and resources provided by third parties. These links are provided for your convenience only. Cat6 Digital has no control over the contents of those sites or resources, and accepts no responsibility for them or for any loss or damage that may arise from your use of them.</p><a href="https://cat6digital.com/cat6-digital-privacy-policy/" class="site-footer__link" target="_self">Privacy Policy</a></div></footer></div>
+<hr></div></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/azimuth-orion/07-modes-and-context"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Modes and Context</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/azimuth-orion/09-graph-editor-toolbar-features"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Graph Editor Toolbar Features</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#opening-settings" class="table-of-contents__link toc-highlight">Opening Settings</a></li><li><a href="#ai-configuration-category" class="table-of-contents__link toc-highlight">AI Configuration Category</a><ul><li><a href="#model-selection" class="table-of-contents__link toc-highlight">Model Selection</a></li><li><a href="#request-settings" class="table-of-contents__link toc-highlight">Request Settings</a></li><li><a href="#temperature-control" class="table-of-contents__link toc-highlight">Temperature Control</a></li><li><a href="#other-settings" class="table-of-contents__link toc-highlight">Other Settings</a></li><li><a href="#custom-endpoint" class="table-of-contents__link toc-highlight">Custom Endpoint (OpenAI-Compatible APIs)</a></li></ul></li><li><a href="#ai-providers-category" class="table-of-contents__link toc-highlight">AI Providers Category</a><ul><li><a href="#enabledisable-providers" class="table-of-contents__link toc-highlight">Enable/Disable Providers</a></li><li><a href="#per-provider-settings" class="table-of-contents__link toc-highlight">Per-Provider Settings</a></li><li><a href="#disabled-models" class="table-of-contents__link toc-highlight">Disabled Models</a></li></ul></li><li><a href="#interface-category" class="table-of-contents__link toc-highlight">Interface Category</a><ul><li><a href="#orion-chat" class="table-of-contents__link toc-highlight">Orion Chat</a></li><li><a href="#integration" class="table-of-contents__link toc-highlight">Integration</a></li><li><a href="#mode-context" class="table-of-contents__link toc-highlight">Mode Context</a></li><li><a href="#logging" class="table-of-contents__link toc-highlight">Logging</a></li></ul></li><li><a href="#blueprint-context-category" class="table-of-contents__link toc-highlight">Blueprint Context Category</a></li><li><a href="#eda-integration-experimental-category" class="table-of-contents__link toc-highlight">EDA Integration (Experimental) Category</a></li><li><a href="#project-indexing-category" class="table-of-contents__link toc-highlight">Project Indexing Category</a></li></ul></div></div></div></div></main></div></div></div><footer class="site-footer"><div class="site-footer__overlay"></div><div class="site-footer__content"><img src="/img/cat6-wordmark.png" alt="Cat6 Digital" class="site-footer__logo"><p class="site-footer__copyright">© <!-- -->2026<!-- --> Cat6 Digital, LLC. All rights reserved. Cat6 Digital &amp; Cat6 Digital Logo, are trademarks or registered trademarks of Cat6 Digital, LLC in the United States of America and elsewhere. Any other brands or product names are the trademarks of their respective owners. All Rights Reserved.</p><p class="site-footer__legal">Our websites may contain links to other sites and resources provided by third parties. These links are provided for your convenience only. Cat6 Digital has no control over the contents of those sites or resources, and accepts no responsibility for them or for any loss or damage that may arise from your use of them.</p><a href="https://cat6digital.com/cat6-digital-privacy-policy/" class="site-footer__link" target="_self">Privacy Policy</a></div></footer></div>
 </body>
 </html>
